@@ -52,6 +52,15 @@ while True:
         library.add_book()
     elif choice == 2:
         library.borrow_book()
+    elif choice == 3:
+        lilbrary.return_book()
+    elif choice == 4:
+        library.display_books()
+    elif choice == 5:
+         print("Thank You !")
+         break 
+    else:
+        print("Invalid choice")
     
 
 
