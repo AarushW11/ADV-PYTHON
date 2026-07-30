@@ -1,0 +1,25 @@
+def login_required(func):
+    def wrapper(logged_in):
+        if logged_in:
+            return func(logged_in)
+        else:
+            print("Access Denied! Please log in first.")
+    return wrapper
+
+
+# Protected function
+@login_required
+def view_dashboard(logged_in):
+    print("Welcome! You can access the dashboard.")
+
+
+# User input
+status = input("Are you logged in? (yes/no): ").lower()
+
+if status == "yes":
+    logged = True
+else:
+    logged = False
+
+# Function call
+view_dashboard(logged)
